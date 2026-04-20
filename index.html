@@ -20,50 +20,33 @@
         body {
             font-family: 'Boldonse', Arial, sans-serif;
         }
-
-        .hero {
-            min-height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: url('images/banner_image.png');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            
-            
-        }
-
-        .hero-text {
-            font-size: 2rem;
-            font-weight: 700;
-            padding: 1rem 2rem;
-            text-align: center;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-            font-family: 'Boldonse', Arial, sans-serif;
-        }
-
-        .topic-card img {
-            width: 200px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <div class="hero-text" style="font-size:3rem;">Baxter's Showcase Website</div>
+        <div class="hero-text">Baxter's Showcase Website</div>
     </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <p>Check out Baxters Personal Website.</p>
+            <a href="https://baxterd.vercel.app" class="visit-btn" target="_blank" rel="noopener noreferrer">Visit</a>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        <p>Check out Baxters Personal Website. <a href="https://baxterd.vercel.app" target="_blank" rel="noopener noreferrer">Visit</a></p>
+        <span class="close-notification">&times;</span>
+    </div>
 
     <nav class="menu">
         <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">
             <span class="hamburger"></span>
         </button>
         <ul class="menu-items">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="index.html">Image Creation</a></li>
+            <li><a href="index.html" class="active">Image Creation</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
@@ -79,6 +62,26 @@
                 items.classList.toggle('open');
             });
         })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('popup');
+            const notification = document.getElementById('notification');
+            const closeBtn = document.querySelector('.close-btn');
+            const closeNotification = document.querySelector('.close-notification');
+
+            setTimeout(() => popup.classList.add('open'), 700);
+
+            closeBtn.addEventListener('click', function() {
+                popup.classList.remove('open');
+                notification.classList.add('visible');
+            });
+
+            closeNotification.addEventListener('click', function() {
+                notification.classList.remove('visible');
+            });
+        });
     </script>
 
     <section class="topic">
@@ -101,10 +104,15 @@
         </div>
     </section>
 
-    <!-- A Simple Website Footer -->
+<!-- Copy and paste the section from above to make your next section -->
+
+
+
+    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
     <footer class="footer">
         <p>&copy; 2026 Baxter Douglas</p>
     </footer>
-    
+
+<!-- The end of the whole page- no more content after this! -->
 </body>
 </html>
