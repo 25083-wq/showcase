@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Programming - Baxter's Showcase Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Star 1.png" type="image/png">
+
+    <style>
+        body { font-family: Arial, sans-serif; padding: 1rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .hero { text-align: center; margin: 1rem 0; }
+        .screenshots { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+        .screenshots img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .note { font-size: 0.9rem; color: #555; margin-top: .5rem; text-align: center; }
+        @media (max-width: 700px) { .screenshots { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul class="menu-items">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Image Creation</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programming.html">Programming</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <h1>Programming</h1>
+            <p class="note">Screenshots below are taken from your local TempState ScreenClip folder.</p>
+        </header>
+
+        <section class="screenshots">
+            <!-- If you want to reference the files directly from their TempState location, use the file:/// URLs below -->
+            <img src="file:///C:/Users/25083/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/%7BBBC1B1A0-71E6-4718-8CA8-8FEF8425CC44%7D.png" alt="Programming screenshot 1">
+            <img src="file:///C:/Users/25083/AppData/Local/Packages/MicrosoftWindows.Client.Core_cw5n1h2txyewy/TempState/ScreenClip/%7B0230861C-62F8-4D3D-AC9F-4D427F5652FA%7D.png" alt="Programming screenshot 2">
+        </section>
+
+        <p class="note">For reliability, copy these images into this site's images/ folder and update the src attributes to images/filename.png (see copy commands below).</p>
+    </div>
+
+    <footer class="footer" style="text-align:center; margin-top:2rem;">
+        <p>&copy; 2026 Baxter Douglas</p>
+    </footer>
+</body>
+</html>
